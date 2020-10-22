@@ -21,11 +21,12 @@ export default async function unmuteCommand(message: Message, args: string[]) {
 
     const userMember = message.guild?.member(user.id);
 
-    const isAllowed = checkIfAllowed(message.author, message.guild, [
-      "ADMINISTRATOR",
-      "MUTE_MEMBERS",
-    ]);
-    if (!isAllowed) return message.reply(`You are not allowed to do that.`);
+    const hasRole = message.member?.roles.cache.find(
+      (role) => role.id === roles.helperRoleId || role.id === roles.helperRoleId
+    );
+
+    if (!hasRole && !message.member?.hasPermission("MUTE_MEMBERS"))
+      return message.reply(`You are not allowed to do that.`);
 
     const profile = await findOrCreateProfile(user.id);
 

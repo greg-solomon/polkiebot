@@ -11,11 +11,6 @@ export default async function kickCommand(message: Message, args: string[]) {
     const reason = args.slice(1, args.length).join(" ");
     let profile;
 
-    // CHECK IF MESSAGE IS SENT IN CHANNEL UNDER STAFF CATEGORY
-    const { channel } = message;
-    const sentChannel = channel as TextChannel;
-    if (sentChannel.parentID !== staffCategoryId) return;
-
     if (!user) return message.reply(`I could not find that user`);
     const hasRole = message.member?.roles.cache.find(
       (role) => role.id === roles.helperRoleId || role.id === roles.helperRoleId
