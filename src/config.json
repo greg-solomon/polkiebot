@@ -1,0 +1,72 @@
+{
+  "prefix": "!",
+  "donationFriendCode": "6001-7325-9825",
+  "mmFriendCode": "3766-2120-5816",
+  "guildId": "753417696103759882",
+  "pageSize": 10,
+  "roles": {
+    "modRoleId": "763253522430820373",
+    "pricerRoleId": "763749258771169281",
+    "pricerTrainerRoleId": "763972069070864436",
+    "designerRoleId": "763924883306315816",
+    "middlemanRoleId": "763925020501606414",
+    "muteRoleId": "763622051709452309",
+    "helperRoleId": "763925130886774794"
+  },
+  "channels": {
+    "repLogsChannelId": "763733503539281940",
+    "modLogsChannelId": "762832200424882208",
+    "showcaseChannelId": "763920510098341920",
+    "middlemanCallChannelId": "763920701270261781",
+    "pricingChatChannelId": "763920759247732736",
+    "lfgChannelId": "763949927511752705",
+    "reputationChannelId": "764270658833088563",
+    "suggestionChannelId": "764342536961261578",
+    "muteAppealsChannelId": "763621804127420449"
+  },
+  "locationRoles": {
+    "usw": {
+      "roleId": "759518929806295122",
+      "text": "US West"
+    },
+    "use": {
+      "roleId": "759518991768879154",
+      "text": "US East"
+    },
+    "eu": {
+      "roleId": "759518879327715368",
+      "text": "Europe"
+    },
+    "as": {
+      "roleId": "759519006381834250",
+      "text": "Asia"
+    },
+    "oce": {
+      "roleId": "759519026333351977",
+      "text": "Oceania"
+    },
+    "sam": {
+      "roleId": "759518951288995850",
+      "text": "South America"
+    },
+    "saf": {
+      "roleId": "759519069124296714",
+      "text": "South Africa"
+    }
+  },
+  "repRoles": {
+    "merchantSix": "764379578725957645",
+    "merchantFive": "764379703636262913",
+    "merchantFour": "764379744883834880",
+    "merchantThree": "764379743620956180",
+    "merchantTwo": "764379815532691486",
+    "merchantOne": "764379873447772200"
+  },
+  "confirmEmoji": "✅",
+  "declineEmoji": "❌",
+  "nextPageEmoji": "▶️",
+  "prevPageEmoji": "◀️",
+  "upvoteEmojiId": "751292527331770378",
+  "downvoteEmojiId": "751289970366480425",
+  "staffCategoryId": "768401180551282688"
+}

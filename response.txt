@@ -1,0 +1,18 @@
+I have tentatively made the following changes:
+ - Helpers can mute, warn, kick, and pull up history
+ - Role hierarchy -> mod commands can not be executed if the sender has a highest role lower than that of the person they are trying to warn/mute/kick etc.
+ - Fixed the issue with the math command not handling decimals and division
+ - History, recallban, recallkick now display in the channels that they are queried in
+ - !addrole works with role pings and typing it out as well. 
+ - !nick rejects names longer than 32 characters
+ - !nick works with role hierarchy, added back up message to say that any issues with self nicknames can be resolved with the built in /nick command
+
+ 
+I have not been able to replicate the issue with the custom commands and emojis.
+
+I have removed timed mutes for simplicity. I am working on a big bot right now and I am looking to have timed mutes as a feature so I will update this bot when I have a better solution. 
+Mute is now `!mute [@user|id] [reason?]`
+
+I have added better logging so when the issues arise in this next build I will be better able to diagnose them.
+
+Thank you for your patience I will be putting this new build on your VPS shortly.

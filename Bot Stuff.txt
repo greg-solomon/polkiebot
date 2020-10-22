@@ -1,0 +1,66 @@
+__Friend Code System:__ 
+- !setfc - Logs a user's friend code, restricted to the SW-####-####-#### format. 
+- !fc - displays your friend code
+- !fc @user - displays another users friend code
+- !fc bot - displays friend code of the donation bot
+- !fc mm - displays friend code of middleman bot.  
+
+------------------------------------------------------------------------------------------------------------------------
+
+__Reputation System__ 
+- !addrep @user reason == header: {mention} has given @user a rep point! body: reason
+- !subrep @user reason == header: {mention} has given @user subrep! body: reason
+	- Triggers second message that pings moderators to verify subrep reason. 
+- !rep @user == displays their last 5 rep + reasons. 
+- !leaderboard == displays leader board of reps, can be scrolled through with reacts.Only shows amount of reps no reasons.   
+- !rephistory @user == DMs the **staff** member who requested it a txt file with all reputation history of a user. 
+- Thumbs down reaction to a reputation (in logs; by staff) removes the rep. 
+- !destroyrep - deletes all the rep of a user. (staff only) 
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+__General Moderation:__ Each sends a message to the mod-logs channel. 
+- !ban + reason
+	- !recallban [ID] recalls ban reason(s). 
+- !kick + reason
+	- !recallkick [ID] recalls kick reason(s). 
+- !warn + reason
+	- Gives user warning. DMs them warning reason. 
+- !mute [s/m/h/d/w] + reason
+	- DMs user they have been muted + for what reason. If no reason given, indefinite mute. Logged as warning. 
+- !history @user: Pulls all of the above into one embed. Ban section, kick section, warn section, etc... 
+
+------------------------------------------------------------------------------------------------------------------------
+
+__Pingable Role Commands:__ 
+- !price [item] - Price request! {mention} wants to know the price of [item] on Nintendo Switch! @pricer roles 
+	- !toggleprice: disabes/enables command {{staff only}}
+	- !pricenp ((the same command, but doesnt ping pricer roles)) 
+
+- !pmr [info]- @Car Designer someone has a request! {mention} would like some design advice on [info].
+	- !togglepmr: disables/enables command ((staff only)) 
+
+- !mm [info]- {mention} needs a middleman! 
+	-!togglemm
+
+- !help [info]- {mention} needs help with [info]! Come quickly @helpers. 
+	- !togglehelp 
+
+------------------------------------------------------------------------------------------------------------------------
+
+__Misc Command:__ Tags
+
+!learn WOW Everyone loves {mention}. == !WOW @JM = Everyone loves @JM.
+	-!commands - displays all commands created from the above.
+	-!forget WOW
+!purge -- Doesn't purge pinned messages; can purge all. 
+!addrole @user [role name] -- adds role to a user 
+!nick [new nickname]
+	- !nick @user [new nickname] ((staff only))
+!math - basic math commands
+ 
+
+
+
+// add functionality for certain roles to update nicknames
