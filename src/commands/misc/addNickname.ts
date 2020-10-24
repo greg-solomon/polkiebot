@@ -22,7 +22,6 @@ export default async function addNickname(message: Message, args: string[]) {
       (role) => role.id === roles.modRoleId || role.id === roles.helperRoleId
     );
 
-    console.log({ changingSelf, hasPermission, hasRole });
     if (!changingSelf && !hasPermission && !hasRole) {
       return message.reply(
         `You don't have permission to change this persons nickname`
@@ -35,6 +34,10 @@ export default async function addNickname(message: Message, args: string[]) {
       if (!message.member?.hasPermission("CHANGE_NICKNAME"))
         return message.reply(`You are not allowed to change your nickname`);
       return await member?.setNickname("");
+    }
+
+    if (changingSelf && !message.member?.hasPermission("CHANGE_NICKNAME")) {
+      return message.reply(`You are not allowed to change your nickname`);
     }
 
     const senderHighestRole = message.member?.roles.highest.position || 0;
@@ -56,6 +59,29 @@ export default async function addNickname(message: Message, args: string[]) {
     if (nickname.length > 32)
       return message.reply(`Nicknames can not exceed 32 characters in length`);
 
+    if (changingSelf) {
+      if (member.hasPermission("CHANGE_NICKNAME")) {
+        if (nickname) {
+          await member.setNickname(nickname);
+          return message.reply(
+            new MessageEmbed({
+              title: `Nickname Change`,
+              description: `${message.author.username} set ${user.username}'s nickname to ${nickname}`,
+              color: `0xff0000`,
+            })
+          );
+        } else {
+          await member.setNickname("");
+          return message.reply(
+            new MessageEmbed({
+              title: `Nickname Change`,
+              description: `${message.author.username} set ${user.username}'s nickname to ${nickname}`,
+              color: `0xff0000`,
+            })
+          );
+        }
+      }
+    }
     if (nickname) {
       await member.setNickname(nickname);
 
