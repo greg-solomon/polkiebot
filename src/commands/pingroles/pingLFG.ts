@@ -48,7 +48,7 @@ async function showRegions(message: Message, args: string[]) {
       );
 
     const embed = await getRegionEmbed();
-
+    if (!embed) return message.reply(`I could not get the regions`);
     return message.channel.send(embed);
   } catch (err) {
     console.error(err.message);

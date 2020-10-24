@@ -15,13 +15,14 @@ export default async function addNickname(message: Message, args: string[]) {
     }
     if (!message.guild) return;
 
-    const hasPermission = message.guild.me?.hasPermission("MANAGE_NICKNAMES");
+    const hasPermission = message.member?.hasPermission("MANAGE_NICKNAMES");
     const changingSelf = user === message.author;
 
     const hasRole = message.member?.roles.cache.find(
       (role) => role.id === roles.modRoleId || role.id === roles.helperRoleId
     );
 
+    console.log({ changingSelf, hasPermission, hasRole });
     if (!changingSelf && !hasPermission && !hasRole) {
       return message.reply(
         `You don't have permission to change this persons nickname`
