@@ -27,7 +27,7 @@ async function pingPricer(
 
   if (args.includes("@everyone")) {
     const labAlpha = message.guild.roles.resolve(roles.labMonitorRoleId);
-    return message.reply(
+    return message.channel.send(
       `Yikes ${message.author.toString()}, come check this out ${labAlpha?.toString()}`
     );
   }
