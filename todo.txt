@@ -1,27 +1,3 @@
-// 1. Add helpers to specific mod commands
-//  - Helpers should have the ability to mute, // warn, // kick, and // pull up a user's history 
-2. Automatically delete posts longer than 8 lines in #trade-posts
-3. Custom commands delete trigger message
- - We have a few commands that were learned wrong, and they are triggered by an emoji. They don't delete with the !forget command
-4. Unable to forget custom commands that include emojis in them; bot confirms it deleted commands that dont even exist
-// 5. Nickname command checks for wrong perm
- 
-// 6. Allows indefinite mutes without reason
-//  - There's an issue with indefinite mutes, where sometimes they won't mute a user with or without a reason. We had a time where we muted someone and the command worked, but neither the mute or reason were logged. Just funky
-// 7. Role hierarchy (admin can't ban owner, etc) -> // KICK, // MUTE, // BAN, // WARN
-// 8. Fix division
-// 9. Remove restriction to mod-logs for some commands, allow them in all staff channels
+add to config
 
-
-// Also the math command has trouble with division, especially when decimals are involved
-
-// History, recallban, recallkick will only display in #mod-logs. We would prefer it to display in whatever channel the command is used in
-
-One last thing! !addrole @user [role name] wont work u less you ping the role
-It should add the role whether you type out the role name or ping it
-
-Nicknames must be 32 chars or fewer
-Find Invalid Form Body error
-
-
----> I need to update the staffCategoryId for the live config.
+labMonitorRoleId: "750826163022069823"

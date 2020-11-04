@@ -11,7 +11,8 @@
     "designerRoleId": "763924883306315816",
     "middlemanRoleId": "763925020501606414",
     "muteRoleId": "763622051709452309",
-    "helperRoleId": "763925130886774794"
+    "helperRoleId": "763925130886774794",
+    "labMonitorRoleId": "773348903428030515"
   },
   "channels": {
     "repLogsChannelId": "763733503539281940",

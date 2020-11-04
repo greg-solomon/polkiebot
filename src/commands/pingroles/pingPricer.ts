@@ -11,6 +11,7 @@ async function pingPricer(
   server: ServerType
 ) {
   if (!message.guild) return;
+
   const priceChannel = getTextChannel(
     message.guild,
     channels.pricingChatChannelId
@@ -23,6 +24,14 @@ async function pingPricer(
   const { priceHelpEnabled } = server;
   if (!priceHelpEnabled)
     return message.reply(`Price help is not available at the moment.`);
+
+  if (args.includes("@everyone")) {
+    const labAlpha = message.guild.roles.resolve(roles.labMonitorRoleId);
+    return message.reply(
+      `Yikes ${message.author.toString()}, come check this out ${labAlpha?.toString()}`
+    );
+  }
+
   if (!args.length)
     return message.reply(`You need to specify an item!\n\`!price [item]\``);
   const item = args.join(" ");
